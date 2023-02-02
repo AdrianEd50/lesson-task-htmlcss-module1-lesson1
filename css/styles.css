@@ -1,0 +1,58 @@
+body { 
+    margin: 0;
+}
+
+/*links*/
+
+a { 
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover { 
+    text-decoration: underline;
+}
+
+.active { 
+    text-decoration: underline;
+}
+
+/*Header & nav*/
+header { 
+    background: darkgray;
+}
+
+ nav ul { 
+    display: inline-block;
+}
+
+nav li {
+    display: inline-block;
+    padding: 0.5rem;
+}
+
+/*Home page*/
+.viewGuitarsCta {
+    background-color: red;
+    border-radius: 7px;
+    padding: 0.3rem;
+    margin: 10px;
+}
+
+.product-view-btn{ 
+    background-color: red;
+    border-radius: 7px;
+    padding: 0.3rem;
+    margin-left: 10px;
+}
+
+img { 
+    max-width: 1000px;
+    width: 100%;
+    margin: 10px;
+}
+
+/*Typography*/
+h3, p, h2, h1 {
+    margin: 10px;
+}
