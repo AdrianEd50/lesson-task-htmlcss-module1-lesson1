@@ -1,12 +1,23 @@
 body { 
     margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+html, body { 
+    height: 100%;
+}
+
+.container { 
+    max-width: 1000px;
+    margin: 0px auto;
 }
 
 /*links*/
 
 a { 
     text-decoration: none;
-    color: #000;
+    color: #fff;
 }
 
 a:hover { 
@@ -17,9 +28,22 @@ a:hover {
     text-decoration: underline;
 }
 
+/*Footer*/
+footer { 
+    text-align: center;
+    margin-top: 15px;
+    flex-shrink: 0;
+}
+
+.wrapper {
+    flex: 1 0 auto;
+}
+
+
 /*Header & nav*/
-header { 
-    background: darkgray;
+header, footer { 
+    background: rgb(40, 38, 38);
+    color: #fff;
 }
 
  nav ul { 
@@ -29,30 +53,248 @@ header {
 nav li {
     display: inline-block;
     padding: 0.5rem;
+    font-family: "roboto";
+}
+
+.logo { 
+    font-family: "Boots And Spurs";
 }
 
 /*Home page*/
 .viewGuitarsCta {
-    background-color: red;
+    background-color: #bb0000;
     border-radius: 7px;
-    padding: 0.3rem;
-    margin: 10px;
+    padding: 0.5rem 4.5rem 0.5rem 4.5rem;
+    margin: 15px;
+    font-family: "roboto";
 }
 
 .product-view-btn{ 
-    background-color: red;
+    background-color: #bb0000;
     border-radius: 7px;
-    padding: 0.3rem;
+    padding: 0.3rem 1.8rem 0.3rem 1.8rem;
     margin-left: 10px;
+    grid-column: 2;
+    grid-row: 2;
 }
 
+.products { 
+    background-color: #fbfbfb;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+
+.products img { 
+    grid-column: -1/1;
+}
+
+.products h2,
+.products h3, 
+.products p {
+    grid-column: 1;
+    font-size: 0.9em;
+    margin: 5px;
+} 
+
+.reviews {
+    background: lightgray;
+    text-align: center;
+    padding: 50px;
+}
+
+.header-content{ 
+    position: absolute;
+    text-align: center;
+    top: 100px;
+    left: 100px;
+}
+
+.header-ul { 
+    margin: 50px auto;
+}
+
+.header-ul, 
+.reviews-content { 
+    max-width: 1000px;
+    display: flex;
+}
+
+.header-ul > *, 
+.reviews-content > * { 
+    flex: 1;
+}
+ 
+.reviews-content { 
+    text-align: left;
+    margin: auto;
+}
+
+.home-page-guitars-grid { 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1000px;
+    margin: 50px auto;
+    grid-gap: 10px;
+}
+
+.home-page-guitars-grid h2 { 
+    grid-column: -1/1; 
+}
+
+.guitar-name { 
+    font-weight: bold;
+}
+
+
+/*images*/
 img { 
     max-width: 1000px;
     width: 100%;
     margin: 10px;
 }
 
+.image-header{ 
+    background-image: url("../images/home-header.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y:bottom;
+    background-position-x:right;
+    min-height: 70vh;
+    position: relative;
+}
+
+.reviews-image { 
+    border-radius: 50%;
+    max-width: 20%;
+}
+
+.home-info-image {
+    border-radius: 60px;
+}
+
+
+
 /*Typography*/
-h3, p, h2, h1 {
+@font-face {
+    font-family:"Boots And Spurs" ;
+    src: url("../fonts/BootsAndSpurs.ttf") format("truetype");
+}
+
+ h2, h1 {
+    font-family: "Boots And Spurs";
     margin: 10px;
+}
+
+p { 
+    font-family: "roboto", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 10px;
+}
+
+/*Contact page*/
+textarea { 
+    height: 65%;
+}
+
+input, 
+select,
+textarea { 
+    border: 1px solid #c4c4c4;
+    margin: 10px 10px 10px 0px;
+    padding: 10px;
+}
+
+.contact-cta { 
+    border-radius: 0.2rem;
+    background-color: #bb0000;
+    border: 2px solid #bb0000;
+    color: #fff;
+    padding: 0.5rem 4.5rem 0.5rem 4.5rem;
+}
+
+.contact-cta:hover { 
+    border-radius: 0.2rem;
+    background-color: rgb(245, 119, 119);
+    border: 2px solid rgb(245, 119, 119);
+    text-decoration: underline;
+    cursor: pointer;;
+}
+
+.contact {
+    max-width: 1000px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.form-wrapper { 
+    display: flex;
+    text-align: left;
+}
+
+.form-wrapper > * { 
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/*Guitar spesific page*/
+.guitar-spesific-cta { 
+    background-color: #bb0000;
+    border: 2px solid #bb0000;
+    color: #fff;
+    border-radius: 7px;
+    padding: 0.5rem 4.5rem 0.5rem 4.5rem;
+    margin: 15px;
+    font-family: "roboto";
+}
+
+.guitar-spesific-cta:hover { 
+    background-color: #f25f5f;
+    border: 2px solid #f25f5f;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.product-spesific { 
+    display: flex;
+}
+
+.guitar-spesific {
+    max-width: 1000px;
+    margin: 50px auto;
+    display: flex;
+}
+
+.product-spesific-image {
+    max-width: 300px;
+}
+
+.guitar-spesific-text {
+    margin: 50px;
+}
+
+.guitar-spesific-button { 
+    margin: 50px;
+}
+
+
+/*Guitar page*/
+.guitars { 
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.guitar-page-spesific {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.guitar-page-spesific h1 { 
+    grid-column: -1/1;
+}
+
+.guitar-page-spesific-image { 
+    width: 100%;
+    
 }

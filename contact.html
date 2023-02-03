@@ -11,21 +11,52 @@
 <body>
     <header>
         <nav>
-            <a href="index.html">Guitar Kings</a>
+            <a href="index.html" class="logo">Guitar Kings</a>
             <ul>
-                <li><a href="index.html">home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="guitars.html">Guitars</a></li>
                 <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <div class="wrapper">
+    <main class="contact">
         <h1>Contact</h1>
-        
-       
+        <section>
+            <form>
+                <div class="form-wrapper">
+            <section>
+                <label for="name">Full name</label>
+                <input type="text" id="name" name="name"></input>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email"></input>
+
+                <label for="guitar">Guitar</label>
+                <select name="guitar" id="guitar">
+                    <option value="Adrondack red">Adrondack Red</option>
+                    <option value="Adrondack black">Adrondack Black</option>
+                    <option value="Adrondack green">Adrondack Green</option>
+                    <option value="Adrondack yellow">Adrondack Yellow</option>
+                </select>
+                <div>
+                  <input type="checkbox" name="email-sign-up" id="email-sign-up">
+                  <label for="email-sign-up">Sign up for email updates</label> 
+                </div>
+                
+            </section> 
+            <section>   
+                <label for="message">Message</label>
+                <textarea name="message" id="essage" cols="20" rows="10" ></textarea>
+            </section>
+                </div>
+                <input type="submit" value="Send Now" class="contact-cta">
+            </form>
+        </section>
     </main>
-    
+   </div>
+    <footer>copyright &copy;</footer>
 </body>
 </html>
 
